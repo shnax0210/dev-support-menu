@@ -120,3 +120,7 @@ window.renderMenu = function (containerId, history) {
     fetchConfig().then(config => ReactDOM.render(<Application history={history}
                                                               config={config}/>, document.getElementById(containerId)));
 }
+
+window.unmountMenu = function (containerId) {
+    ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+}
