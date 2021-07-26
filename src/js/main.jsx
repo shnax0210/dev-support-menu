@@ -29,13 +29,23 @@ function fetchConfig() {
 const MenuDiv = styled.div`
     width: 100%;
     height: 40px;
-    background-color: #808080;
+    display: flex;
+    justify-content: flex-end;
+`
+
+const MenuLink = styled(Link)`
+    text-decoration: none;
+    margin: auto 10px;
+    color: black;
+    $:visited, $:hover, $:active {
+        color: inherit;
+    }
 `
 
 class Menu extends React.Component {
     render() {
         const menuItems = this.props.config.menuItems.map(menuItem => {
-            return <Link to={menuItem.path} key={menuItem.path}>{menuItem.name}</Link>
+            return <MenuLink to={menuItem.path} key={menuItem.path}>{menuItem.name}</MenuLink>
         })
         return <MenuDiv>{menuItems}</MenuDiv>
     }

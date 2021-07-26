@@ -8,6 +8,14 @@
         "name": "StateMachine",
         "host": "http://localhost:9082"
       }
+    },
+    {
+      "name": "About",
+      "path": "/about",
+      "microFrontend": {
+        "name": "About",
+        "host": "http://localhost:9084"
+      }
     }
   ]
 }
