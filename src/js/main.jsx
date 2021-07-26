@@ -61,8 +61,8 @@ class MicroFrontendContent extends React.Component {
     }
 
     renderMicroFrontend = () => {
-        window.renderMicroFrontend(CONTENT_CONTAINER_ID, this.props.microFrontend.host, 
-            this.props.microFrontend.name, this.props.history, this.props.microFrontend.path);
+        window.renderMicroFrontend(CONTENT_CONTAINER_ID, this.props.menuItem.microFrontend.host, 
+            this.props.menuItem.microFrontend.name, this.props.history, this.props.menuItem.path);
     }
 
     render() {
@@ -74,7 +74,7 @@ class Content extends React.Component {
     render() {
         const contentRoutes = this.props.config.menuItems.map(menuItem => {
             return (<Route path={menuItem.path} key={menuItem.path}>
-                    <MicroFrontendContent microFrontend={menuItem.microFrontend} history={this.props.history}/>
+                    <MicroFrontendContent menuItem={menuItem} history={this.props.history}/>
                 </Route>
             )
         });
