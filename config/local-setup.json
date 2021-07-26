@@ -1,0 +1,13 @@
+{
+  "menuItems": [
+    {
+      "name": "State machine",
+      "path": "/state-machine",
+      "isDefault": true,
+      "microFrontend": {
+        "name": "StateMachine",
+        "host": "http://localhost:9082"
+      }
+    }
+  ]
+}
